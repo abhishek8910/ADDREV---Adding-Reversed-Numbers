@@ -1,0 +1,25 @@
+#include<stdio.h>
+int revo(int num)                                 
+{
+    int rev=0;
+    int d=0;
+    while(num)
+    {
+    	d=num%10;
+     	rev=rev*10+d;
+     	num=num/10;
+    }
+    return rev;
+}
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int num1,num2;
+        scanf("%d%d",&num1,&num2);
+        printf("%d\n",revo(revo(num1)+revo(num2)));
+    }
+    return 0;
+}
